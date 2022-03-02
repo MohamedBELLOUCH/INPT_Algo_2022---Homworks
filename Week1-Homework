@@ -1,0 +1,18 @@
+def diviseurs(n):
+    "Liste des diviseurs d'un entier"
+    a, b = 1, n
+    D=[a, b]
+    while a != b-1:
+        a += 1
+        if n%a == 0:
+            b = n//a
+            D += [a, b]
+    return D
+    
+ def pgcd(a, b):
+    "Renvoi le pgcd de a et b avec a>b"
+    while b != 0:
+        r = a%b
+        a = b
+        b = r
+    return a
